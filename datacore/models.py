@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 
 class ScrappedData(models.Model):
@@ -6,4 +7,7 @@ class ScrappedData(models.Model):
 
 
 class RawFiles(models.Model):
-    file = models.FileField(upload_to="files/")
+    file = models.FileField(
+        upload_to="uploads/",
+        validators=[FileExtensionValidator(allowed_extensions=["csv", "xlsx"])],
+    )

@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import ScrappedData
+from .models import RawFiles
 
 
-class ScrappedDataSerializer(serializers.ModelSerializer):
+class RawFilesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ScrappedData
-        fields = ["email"]
+        model = RawFiles
+        fields = ["file"]
