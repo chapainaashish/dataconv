@@ -79,7 +79,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "dataconv",
         "HOST": "localhost",
-        "USER": config("USER"),
+        "USER": config("USERNAME"),
         "PASSWORD": config("PASSWORD"),
     }
 }
