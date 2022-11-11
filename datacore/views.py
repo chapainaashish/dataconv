@@ -15,7 +15,6 @@ class RawFilesViewset(ListCreateAPIView):
         serializer = RawFilesSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        print(serializer.validated_data)
         data_obj = DataScrap(serializer.validated_data["file"])
         data = data_obj.get_data()
 
