@@ -1,4 +1,5 @@
-from django.urls import path, include
-from .views import RawFilesViewset
+from django.urls import include, path
 
-urlpatterns = [path("", RawFilesViewset().as_view())]
+from . import views
+
+urlpatterns = [path("", views.file_post)]

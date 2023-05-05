@@ -1,6 +1,7 @@
-import pandas as pd
-import openpyxl
 import os
+
+import openpyxl
+import pandas as pd
 
 
 class DataScrap:
@@ -52,5 +53,4 @@ class DataScrap:
             data = self.read_csv()
         elif extension == ".xlsx":
             data = self.read_excel()
-        os.remove(self.file)
         return data
